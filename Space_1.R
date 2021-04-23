@@ -45,9 +45,9 @@ space_df
 
 space_df$poph <- paste('latitude=' ,  space_df$latitude, 'longitude=', space_df$longitude)
 
-fig = plot_geo(space_df, lon = space_df$longitude, lat = space_df$latitude, text = ~poph ,
+fig = plot_geo(space_df, lat = space_df$latitude, lon = space_df$longitude,  text = ~poph , 
   mode = 'markers', symbol = 'circle',
-  color = 'rgba(255, 182, 193, .9)', marker = list( size = 20 ))%>% 
+  color = 'rgba(255, 182, 193, .9)', marker = list( size = 20 ), hoverinfo = "text")%>% 
   layout(title = 'Current ISS Location')
 fig
  
